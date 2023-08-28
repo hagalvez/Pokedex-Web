@@ -17,6 +17,20 @@ namespace pokedex_web
         {
             PokemonNegocio negocio = new PokemonNegocio();
             listaPokemon = negocio.listarConSP();
+
+            if (!IsPostBack)
+            {
+                repRepetidor.DataSource = listaPokemon;
+                repRepetidor.DataBind();
+
+            }
         }
-    } 
+
+        protected void btnEjemplo_Click(object sender, EventArgs e)
+        {
+            string valor = ((Button)sender).CommandArgument;   // yo se que el sender es un button (pq es el que me dispara el evento) 
+
+            // basicamente me traigo el argumento que le puse al botón al hacerle click en el, y lo agarro en "valor"
+        }
+    }
 }
