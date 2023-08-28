@@ -30,6 +30,7 @@ namespace pokedex_web
         {
             string valor = ((Button)sender).CommandArgument;   // yo se que el sender es un button (pq es el que me dispara el evento) 
 
+            
             // basicamente me traigo el argumento que le puse al botón al hacerle click en el, y lo agarro en "valor"
         }
     }
